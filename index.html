@@ -1,0 +1,238 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Guillermo Ramirez | DevOps Engineer</title>
+
+<style>
+
+/* ===== THEMES ===== */
+:root {
+    --bg: #0d1117;
+    --card: #161b22;
+    --text: #c9d1d9;
+    --accent: #58a6ff;
+}
+
+.light {
+    --bg: #f5f5f5;
+    --card: #ffffff;
+    --text: #111;
+    --accent: #0077cc;
+}
+
+.hacker {
+    --bg: #000000;
+    --card: #010409;
+    --text: #00ff9c;
+    --accent: #00ff9c;
+}
+
+/* ===== GLOBAL ===== */
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    background: var(--bg);
+    color: var(--text);
+}
+
+/* ===== HEADER ===== */
+header {
+    text-align: center;
+    padding: 40px 20px;
+}
+
+h1 {
+    margin: 0;
+    color: var(--accent);
+}
+
+.subtitle {
+    color: gray;
+}
+
+/* ===== BUTTONS ===== */
+.theme-buttons {
+    margin-top: 15px;
+}
+
+.theme-buttons button {
+    margin: 5px;
+    padding: 8px 15px;
+    border: none;
+    cursor: pointer;
+    border-radius: 6px;
+}
+
+/* ===== CONTAINER ===== */
+.container {
+    max-width: 1000px;
+    margin: auto;
+    padding: 20px;
+}
+
+/* ===== CARD ===== */
+.card {
+    background: var(--card);
+    padding: 20px;
+    margin-bottom: 20px;
+    border-radius: 10px;
+}
+
+/* ===== TERMINAL ===== */
+.terminal {
+    background: #000;
+    padding: 20px;
+    border-radius: 10px;
+    font-family: monospace;
+    min-height: 180px;
+}
+
+.cursor {
+    animation: blink 1s infinite;
+}
+
+@keyframes blink {
+    50% { opacity: 0; }
+}
+
+/* ===== JOB ===== */
+.job-title {
+    font-weight: bold;
+    color: var(--accent);
+}
+
+/* ===== FOOTER ===== */
+footer {
+    text-align: center;
+    padding: 20px;
+}
+
+</style>
+</head>
+
+<body>
+
+<header>
+    <h1>Guillermo Ramirez</h1>
+    <div class="subtitle">DevOps Engineer</div>
+
+    <p>Email: gramirez16814@plataforma-utslp.net</p>
+    <p>Phone: +52 444 514 9668</p>
+
+    <div class="theme-buttons">
+        <button onclick="setTheme('default')">🌙 Dark</button>
+        <button onclick="setTheme('light')">☀️ Light</button>
+        <button onclick="setTheme('hacker')">🟢 Hacker</button>
+    </div>
+</header>
+
+<div class="container">
+
+    <!-- CERTIFICATIONS -->
+    <div class="card">
+        <h2>Certifications</h2>
+        <ul>
+            <li>CCNA</li>
+            <li>Cisco Cybersecurity</li>
+            <li>Cisco NDG Linux</li>
+            <li>Juniper JNCIA-SEC</li>
+            <li>AWS</li>
+            <li>OCI Certification</li>
+            <li>Azure Trainings</li>
+        </ul>
+    </div>
+
+    <!-- EXPERIENCE -->
+    <div class="card">
+        <h2>Experience</h2>
+
+        <p class="job-title">Sr. DevOps Engineer - The Home Depot (2025 – Present)</p>
+        <ul>
+            <li>Lead multi-cloud architecture (AWS, Azure, GCP, OCI)</li>
+            <li>Terraform Infrastructure as Code</li>
+            <li>Kubernetes (EKS/GKE) + Helm</li>
+            <li>CI/CD with GitHub Actions</li>
+        </ul>
+
+        <p class="job-title">DevOps - Softtek (2023 – Present)</p>
+        <ul>
+            <li>Improved cloud reliability across AWS, Azure, GCP</li>
+            <li>Terraform automation</li>
+            <li>CI/CD pipelines with Jenkins</li>
+        </ul>
+
+        <p class="job-title">DevOps - ArkonData (2023)</p>
+        <ul>
+            <li>Managed AKS clusters</li>
+            <li>Terraform provisioning</li>
+            <li>Azure DevOps pipelines</li>
+        </ul>
+
+        <p class="job-title">Cloud Migration Operator - IPICYT (2020–2023)</p>
+        <ul>
+            <li>Cloud migrations AWS/Azure</li>
+            <li>Docker & Kubernetes</li>
+            <li>Automation with PowerShell</li>
+        </ul>
+
+    </div>
+
+    <!-- TERMINAL -->
+    <div class="card">
+        <h2>DevOps Terminal</h2>
+        <div class="terminal">
+            <pre id="terminal"></pre><span class="cursor">|</span>
+        </div>
+    </div>
+
+</div>
+
+<footer>
+© 2026 Guillermo Ramirez
+</footer>
+
+<script>
+
+/* ===== TERMINAL ANIMATION ===== */
+const lines = [
+"$ git push origin main",
+"Triggering pipeline...",
+"Running CI...",
+"Deploying...",
+"Deployment successful 🚀"
+];
+
+let i = 0, j = 0;
+const terminal = document.getElementById("terminal");
+
+function type() {
+    if (i < lines.length) {
+        if (j < lines[i].length) {
+            terminal.textContent += lines[i][j++];
+            setTimeout(type, 30);
+        } else {
+            terminal.textContent += "\n";
+            i++; j = 0;
+            setTimeout(type, 300);
+        }
+    }
+}
+type();
+
+/* ===== THEME SWITCHER ===== */
+function setTheme(mode) {
+    document.body.classList.remove("light", "hacker");
+
+    if (mode === "light") {
+        document.body.classList.add("light");
+    } else if (mode === "hacker") {
+        document.body.classList.add("hacker");
+    }
+}
+
+</script>
+
+</body>
+</html>
