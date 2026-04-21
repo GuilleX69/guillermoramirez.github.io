@@ -150,42 +150,82 @@ footer {
 
         <p class="job-title">Sr. DevOps Engineer - The Home Depot (2025 – Present)</p>
         <ul>
+            <li>Lead multi-cloud DevOps architecture across AWS, Azure, GCP, and OCI, supporting enterprise-scale retail platforms.</li>
+            <li>Designed and standardized Infrastructure as Code (IaC) using Terraform, importing legacy infrastructure and establishing reusable modules to accelerate new deployments.</li>
+            <li>Architected and managed Kubernetes platforms (EKS, GKE) including Helm-based deployments, ELK/Loki observability stacks, and production-grade scaling strategies.</li>
+            <li>Directed on-premises to cloud and cloud-to-cloud migrations, optimizing cost, resilience, and security posture across environments</li>
+            <li>Engineered CI/CD pipelines using GitHub Actions, TeamCity, and Octopus Deploy, improving deployment consistency and reducing release cycles.</li>
+            <li>Implemented enterprise observability frameworks (CloudWatch, ELK, Grafana, Loki), designing SLO-driven dashboards, alerting systems, and automated notification workflows.</li>
+            <li>Strengthened security posture through vulnerability patching, incident response leadership, threat mitigation, and reverse engineering analysis.</li>
+            <li>Administered Azure enterprise environments (Windows Server, IIS, .NET, ASP.NET Core, Active Directory, PowerShell automation).</li>
+            <li>Designed data and AI infrastructure across OCI and GCP (BigQuery, Looker, FastAPI), enabling analytics, ML/DL workloads, and GenAI integrations (Gemini).</li>
+            <li>Managed AWS Control Tower governance (OU structure, SCP alignment, cost optimization, CloudFront configuration).</li>
+            <li>Automated infrastructure and configuration management using Ansible for hybrid and multi-cloud systems.</li>
+            <li>Integrated next-generation AI workflows including prompt engineering, agent-based task automation, and agentic pipeline orchestration.</li>
+            <li>Collaborated with network security teams managing Palo Alto and Juniper firewalls in hybrid cloud environments.</li>
+        </ul>
+
+        <p class="job-title">DevOps - Softtek (2023–2025)</p>
+        <ul>
+            <li>Enhanced multi-cloud reliability and addressing operational inefficiencies in production systems on AWS, MS Azure and GCP</li>
+            <li>Automated infrastructure provisioning using Terraform, improving deployment speed and standardization.</li>
+            <li>Designed and implemented Kubernetes-based solutions for scaling and resilience.</li>
+            <li>Developed CI/CD pipelines with Jenkins and Github Actions integrating automated tests to ensure high-quality, secure deployments.</li>
+            <li>Built and maintained monitoring dashboards with Amazon CloudWatch and looker, enabling proactive incident detection.</li>
+            <li>Applied SRE practices to streamline incident response and root cause analysis, reducing downtime and mean time to recovery (MTTR).</li>
+            <li>Leveraged Lambda to support large-scale data workflows and analytics pipelines.</li>
+            <li>Python/Bash/Powershell scripting for automating operational tasks on Linux and windows environments.</li>
+
+        </ul>
+
+        <p class="job-title">DevOps - ArkonData (2023)</p>
+        <ul>
+            <li>Enhanced multi-cloud reliability and addressing operational inefficiencies in production systems on AWS, MS Azure and GCP.</li>
+            <li>Automated infrastructure provisioning using Terraform, improving deployment speed and standardization.</li>
+            <li>Designed and implemented Kubernetes-based solutions for scaling and resilience.</li>
+            <li>Developed CI/CD pipelines with Jenkins and Github Actions integrating automated tests to ensure high-quality, secure deployments.</li>
+            <li>Built and maintained monitoring dashboards with Amazon CloudWatch and looker, enabling proactive incident detection.</li>
+            <li>Applied SRE practices to streamline incident response and root cause analysis, reducing downtime and mean time to recovery (MTTR).</li>
+            <li>Leveraged Lambda to support large-scale data workflows and analytics pipelines.</li>
+            <li>Python/Bash/Powershell scripting for automating operational tasks on Linux and windows environments.</li>
+        </ul>
+
+        <p class="job-title">Cloud Migration Operator - IPICYT (2020–2023)</p>
+        <ul>
+            <li>Administered Kubernetes clusters on Azure Kubernetes Service (AKS), ensuring seamless deployment and scaling of microservices.</li>
+            <li>Optimized production environments by configuring kubectl for efficient management of Kubernetes workloads.</li>
+            <li>Automated cloud infrastructure provisioning using Terraform, enhancing consistency across Oracle Cloud, AWS, and Azure.</li>
+            <li>Designed resilient data pipelines with Oracle Data Integrator (ODI) and Azure Functions for event-driven workflows.</li>
+            <li>Configured load balancers and Kubernetes ingress controllers, ensuring high availability and reliability of containerized applications.</li>
+            <li>Streamlined CI/CD processes with Azure DevOps pipelines, reducing deployment time and increasing delivery frequency.</li>
+            <li>Managed production datasets in Azure Blob Storage and Data Lake, optimizing for cost-efficiency and accessibility.</li>
+            <li>Conducted compliance audits and vulnerability assessments, enhancing the security posture of production systems.</li>
+            <li>Developed playbooks in Ansible for automated patching and updates in hybrid environments.</li>
+        </ul>
+
+    </div>
+
+    <!-- Projects 
+    <div class="card">
+        <h2>Projects</h2>
+
+        <p class="project-title">www.nogordas.com</p>
+        <ul>
             <li>Lead multi-cloud architecture (AWS, Azure, GCP, OCI)</li>
             <li>Terraform Infrastructure as Code</li>
             <li>Kubernetes (EKS/GKE) + Helm</li>
             <li>CI/CD with GitHub Actions</li>
         </ul>
 
-        <p class="job-title">DevOps - Softtek (2023 – Present)</p>
-        <ul>
-            <li>Improved cloud reliability across AWS, Azure, GCP</li>
-            <li>Terraform automation</li>
-            <li>CI/CD pipelines with Jenkins</li>
-        </ul>
 
-        <p class="job-title">DevOps - ArkonData (2023)</p>
-        <ul>
-            <li>Managed AKS clusters</li>
-            <li>Terraform provisioning</li>
-            <li>Azure DevOps pipelines</li>
-        </ul>
 
-        <p class="job-title">Cloud Migration Operator - IPICYT (2020–2023)</p>
-        <ul>
-            <li>Cloud migrations AWS/Azure</li>
-            <li>Docker & Kubernetes</li>
-            <li>Automation with PowerShell</li>
-        </ul>
-
-    </div>
-
-    <!-- TERMINAL -->
+     TERMINAL 
     <div class="card">
         <h2>DevOps Terminal</h2>
         <div class="terminal">
             <pre id="terminal"></pre><span class="cursor">|</span>
         </div>
-    </div>
+    </div>-->
 
 </div>
 
@@ -195,7 +235,7 @@ footer {
 
 <script>
 
-/* ===== TERMINAL ANIMATION ===== */
+/* ===== TERMINAL ANIMATION ===== 
 const lines = [
 "$ git push origin main",
 "Triggering pipeline...",
@@ -203,7 +243,6 @@ const lines = [
 "Deploying...",
 "Deployment successful 🚀"
 ];
-
 let i = 0, j = 0;
 const terminal = document.getElementById("terminal");
 
