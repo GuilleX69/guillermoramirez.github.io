@@ -245,14 +245,14 @@ footer {
 
 <footer>
 © 2026 Guillermo Ramirez
-Visitors: <span id="visitor-count"></span> | 
+
 Last Updated: <span id="last-update"></span>
 
 </footer>
 
 <script>
 
-/* ===== VISITOR COUNTER ===== */
+/* ===== VISITOR COUNTER ===== 
 fetch("https://api.countapi.xyz/hit/guillermoramirez-portfolio/visits")
   .then(res => res.json())
   .then(res => {
@@ -262,7 +262,7 @@ fetch("https://api.countapi.xyz/hit/guillermoramirez-portfolio/visits")
     document.getElementById("visitor-count").innerText = "N/A";
   });
 
-/* ===== LAST UPDATED DATE ===== */
+ ===== LAST UPDATED DATE ===== */
 document.getElementById("last-update").innerText = document.lastModified;
 
 /* ===== TERMINAL ANIMATION ===== 
